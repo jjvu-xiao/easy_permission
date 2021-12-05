@@ -4,9 +4,9 @@ import 'dart:async';
 import 'package:easy_permission/easy_permission_api.dart';
 
 
-Future<void> main() async {
+void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  await requestPermissions();
+  // await requestPermissions();
   runApp(MyApp());
 }
 
@@ -41,7 +41,12 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: \n'),
+          child: RaisedButton(
+            child: Text('Running on: \n'),
+            onPressed: () {
+              EasyPermission.openSettings();
+            },
+          ),
         ),
       ),
     );
