@@ -1,16 +1,16 @@
-[English](README_ENG.md) 
+[中文](README.md) 
 # easy_permission
 
-Flutter 权限插件
+Flutter permission Plugin
 
-## 描述
+## description
 
-可以快捷简单地用于 Flutter 权限申请，告别繁琐的轻量级权限申请。如果能搭配 permission_handler使用，事半功倍。
+This method can be used to apply for Flutter permission quickly and easily, eliminating the tedious lightweight permission application. If used with permission_handler, the result is much better.
 
 ## 效果如下
-![效果图](doc/img/screen.jpeg)
+![effect picture](doc/img/screen.jpeg)
 
-## 代码使用
+## How to use
 
 ```dart
 Future<void> main() async {
@@ -36,7 +36,7 @@ Future<void> requestPermissions() async {
 }
 ```
 
-## 对应的权限
+## Corresponding permissions
 
 ```dart
 enum PermissionType {
@@ -55,10 +55,10 @@ enum PermissionType {
 }
 ```
 
-## 注意事项
+## Note
 
 ### Android
-Android的权限分为 静态权限与动态权限，该插件只能用于动态权限，需要在 AndroidManifest.xml文件中先进行静态权限申请
+Android permissions are divided into static permissions and dynamic permissions. This plug-in can only be used for dynamic permissions. You need to apply for static permissions in the Androidmanifest.xml file first
 
 ```xml
   <uses-permission android:name="android.permission.INTERNET" />
@@ -87,7 +87,7 @@ Android的权限分为 静态权限与动态权限，该插件只能用于动态
 
 ### iOS
 
-在iOS目录下Runner目录下的 info.plist文中加入以下配置,权限申请必须说明"因为 xxx功能所以需要xxx权限"，不能写 "需要拍照所以申请拍照权限"这种描述，会被 Appstore 因为“元数据问题”而拒绝上架 
+Add the following configuration in info.plist of Runner directory in iOS directory: permission application must state that "XXX permission is required because of XXX function", and the description of "apply for permission to take photos because I need to take photos" cannot be written, which will be rejected by Appstore due to "metadata problems"
 
 ``` xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -120,9 +120,9 @@ Android的权限分为 静态权限与动态权限，该插件只能用于动态
 </dict>
 ```
 
-## 使用场景
-推荐在main方法中 用该插件先动态申请 一些必要的 权限，比如网络、定位等。
+## usage scenario
+It is recommended to use this plug-in in the main method to dynamically apply for necessary permissions, such as network and location.
 
 
-## 注意事项
-该插件申请权限 前 请先使用 Platform.isAndroid来判断，iOS权限没有动态申请，只需要 在 info.plist 静态声明即可
+## warnning
+Before applying for permissions for the plug-in, use platform. isAndroid to check whether iOS permissions are dynamically applied for. You only need to statically declare permissions in info.plist

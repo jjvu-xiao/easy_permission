@@ -1,8 +1,8 @@
 name: easy_permission
 description: Flutter 权限插件
 version: 1.0.0
-author: xiao
-homepage:
+author: XiaoBing
+homepage: https://github.com/jjva-xiao/easy_permission
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

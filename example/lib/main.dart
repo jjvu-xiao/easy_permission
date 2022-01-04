@@ -1,4 +1,6 @@
 
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:easy_permission/easy_permission_api.dart';
@@ -11,13 +13,20 @@ Future<void> main() async {
 }
 
 Future<void> requestPermissions() async {
-  List<PermissionType> types = [];
-  types.add(PermissionType.LOCATION);
-  types.add(PermissionType.CAMERA);
-  types.add(PermissionType.STORAGE);
-  types.add(PermissionType.MICROPHONE);
-  types.add(PermissionType.CALENDAR);
-  await EasyPermission.requestPermissions(types);
+  if (Platform.isAndroid) {
+    List<PermissionType> types = [];
+    // 申请位置权限
+    types.add(PermissionType.LOCATION);
+    // 申请相机权限
+    types.add(PermissionType.CAMERA);
+    // 申请存储权限
+    types.add(PermissionType.STORAGE);
+    // 申请麦克风权限
+    types.add(PermissionType.MICROPHONE);
+    // 申请日历权限
+    types.add(PermissionType.CALENDAR);
+    await EasyPermission.requestPermissions(types);
+  }
 }
 class MyApp extends StatefulWidget {
   @override
