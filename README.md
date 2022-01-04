@@ -8,7 +8,7 @@ Flutter 权限插件
 可以快捷简单地用于 Flutter 权限申请，告别繁琐的轻量级权限申请。如果能搭配 permission_handler使用，事半功倍。
 
 ## 效果如下
-![效果图](doc/img/screen.jpeg)
+![效果图](https://github.com/jjva-xiao/easy_permission/blob/main/doc/img/screen.jpeg)
 
 ## 代码使用
 

@@ -3,7 +3,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:easy_permission/easy_permission_api.dart';
+import 'package:easy_permission/easy_permission.dart';
 
 
 Future<void> main() async {
